@@ -1,194 +1,70 @@
-function oneThroughTwenty() {
-  let cont;
-  let numeroarr = [];
-  let valor = 1;
-  for(cont =0; cont< 20;cont++){
-  numeroarr[cont] = valor;
-  valor++
-
+// comece a criar a sua função add na linha abaixo
+function add(soma1,soma2){
+return soma1+soma2;
 }
-return numeroarr;
+
+// descomente a linha seguinte para testar sua função
+ console.assert(add(3, 5) === 8,'A função add não está funcionando como esperado');
+
+
+// comece a criar a sua função multiply na linha abaixo
+function multiply(multiplicado,multiplicador){
+    return multiplicado*multiplicador;
 }
-console.log(oneThroughTwenty());
 
-//call function oneThroughTwenty
+// descomente a linha seguinte para testar sua função
+ console.assert(multiply(4, 6) === 24, 'A função multiply não está funcionando como esperado');
 
-function evensToTwenty() {
-  let vetor = [];
-  let cont;
-  let nun1= 1;
-  let retorno = [];
-  
-  for(cont = 0; cont<20;cont++){
-     vetor[cont]= nun1;
-     nun1++;
-   } 
 
-   for(cont = 0;cont<20; cont++){
-     if((vetor[cont]%2)===0)
-     {
-       retorno[cont] = vetor[cont];
-     }
-   }
-
-   return retorno;
-}
-console.log(evensToTwenty())
-//call function evensToTwenty
-
-function oddsToTwenty() {
-    
-let vetor2=[];
-let cont;
-let vetorimpar=[];
-let insere =1 ;
-for(cont= 0; cont<20;cont ++){
-vetor2[cont] =insere;
-insere++;
-}
-for(cont=0;cont<20;cont++){
-  if((vetor2[cont]%2)!==0)
-  {
-   vetorimpar[cont/2] = vetor2[cont];
-  }
-}
-return vetorimpar;
-}
-console.log(oddsToTwenty())
-
-//call function oddsToTwenty
-
-function multiplesOfFive() {
-  let cont;
-  let todosmult=[];
-  let outrocont= 1;
-  for(cont =0;cont<20; cont++){
-    todosmult[cont]=(5*outrocont);
-    outrocont++
-
-  }
- return todosmult;
-}
-console.log(multiplesOfFive())
-//call function multiplesOfFive
-
-function squareNumbers() {
- let cont;
- let teste;
- let result =[] ;
- for(cont=0;;cont++){
-  if (cont > 0){
-    teste = cont*cont;
-    if(teste<=100){
-      result[cont]= teste;
-    }else{
-      return result;
+// comece a criar a sua função power na linha abaixo
+function power(valor,potencia){
+    let cont;
+    let total=valor;
+    for(cont=1;cont<potencia;cont++){
+        total*=valor;
     }
-    
-  }
-
- }
+    return total;
 }
-  console.log(squareNumbers())
-//call function squareNumbers
 
-function countingBackwards() {
-    
-  let cont;
-  let numeroarr2 = [];
-  let valor2 = 20;
-  for(cont =0; cont< 20;cont++){
-  numeroarr2[cont] = valor2;
-  valor2--
-  }
-  return numeroarr2;
-}
-console.log(countingBackwards())
-//call function countingBackwards
+// descomente a linha seguinte para testar sua função
+ console.assert(power(3, 4) === 81, 'A função power não está funcionando como esperado');
 
-function evenNumbersBackwards() {
-    
-  let vetor = [];
-  let cont;
-  let nun1= 1;
-  let retorno=[];
-  
-  
-  
-  for(cont = 0; cont<20;cont++){
-     vetor[cont]= nun1;
-     nun1++;
-   } 
 
-   for(cont =0; cont <20; cont++){
-     if((vetor[cont]%2)===0)
-     {
-       retorno[cont] = vetor[cont];
-     }
-   }
-   retorno.reverse();
-   return retorno;
-}
-console.log(evenNumbersBackwards())
-//call function evenNumbersBackwards
+// comece a criar a sua função factorial na linha abaixo
 
-function oddNumbersBackwards() {
-    
-  let vetor2=[];
-  let cont;
-  let vetorimpar=[];
-  let insere =1 ;
-  for(cont= 0; cont<20;cont ++){
-  vetor2[cont] =insere;
-  insere++;
-  }
-  for(cont=0;cont<20;cont++){
-    if((vetor2[cont]%2)!==0)
-    {
-     vetorimpar[cont] = vetor2[cont];
+function factorial(fato){
+    let cont;
+    let valor=1;
+    for(cont=1;cont<=fato;cont++){
+        valor =valor*cont;
     }
-  }
-  vetorimpar.reverse();
-  return vetorimpar;
+    return valor
 }
-console.log(oddNumbersBackwards())
-//call function oddNumbersBackwards
+// descomente a linha seguinte para testar sua função
+ console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
 
-function multiplesOfFiveBackwards() {
-    
-  let cont;
-  let todosmult=[];
-  let outrocont= 1;
-  for(cont =0;cont<20; cont++){
-    todosmult[cont]=(5*outrocont);
-    outrocont++
 
-  }
-  todosmult.reverse()
-  return todosmult;
+/**
+ * BONUS (aviso: o grau de dificuldade é bem maior !!!)
+ */
+
+// crie a função fibonacci
+
+function fibonacci(fbo){
+    let cont ;
+    let arr=[];
+    for(cont=0;cont<=fbo;cont++){
+        if(cont===0){
+            arr[cont]=cont;
+        }else if(cont===1){
+            arr[cont]=cont;
+        }
+        else{
+            
+            arr[cont]=arr[cont-2]+arr[cont-1];
+        }
+    }return arr[fbo-1];
+
 }
-console.log(multiplesOfFiveBackwards())
-//call function multiplesOfFiveBackwards
-
-function squareNumbersBackwards() {
-    
-  let cont;
-  let teste;
-  let result =[] ;
-  for(cont=0;;cont++){
-   if (cont > 0){
-     teste = cont*cont;
-     if(teste<=100){
-       result[cont]= teste;
-     }else{
-       result.reverse()
-       return result;
-     }
-     
-   }
- 
-  }
-}
-console.log(squareNumbersBackwards())
-
-//call function squareNumbersBackwards
+// descomente a linha seguinte para testar sua função
+console.assert(fibonacci(8) === 13, 'A função fibonacci não está funcionando como esperado');
