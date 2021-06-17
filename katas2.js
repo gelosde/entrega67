@@ -8,23 +8,32 @@ return soma1+soma2;
 
 
 // comece a criar a sua função multiply na linha abaixo
-function multiply(multiplicado,multiplicador){
-    return multiplicado*multiplicador;
-}
-
-// descomente a linha seguinte para testar sua função
- console.assert(multiply(4, 6) === 24, 'A função multiply não está funcionando como esperado');
-
-
-// comece a criar a sua função power na linha abaixo
-function power(valor,potencia){
-    let cont;
-    let total=valor;
-    for(cont=1;cont<potencia;cont++){
-        total*=valor;
-    }
-    return total;
-}
+        function multiply(multiplicado,multiplicador){
+            let total=0;
+            for(let cont=1;cont<multiplicador;cont++){
+            if(cont===1){
+            total=(add(multiplicado,multiplicado));
+                
+        }else{
+                total =add(total,multiplicado);
+            }
+        }   
+            
+            
+           return total;
+          }
+          function power(valor,potencia){
+            let total=0;   
+            for(cont=1;cont<potencia;cont++){
+            if(cont===1){
+                total= multiply(valor,valor);
+            }else{
+                total=multiply(total,valor);
+            }
+            }
+          
+            return total;
+        }
 
 // descomente a linha seguinte para testar sua função
  console.assert(power(3, 4) === 81, 'A função power não está funcionando como esperado');
