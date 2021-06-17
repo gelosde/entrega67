@@ -62,7 +62,7 @@ function factorial(fato){
 function fibonacci(fbo){
     let cont ;
     let arr=[];
-    for(cont=0;cont<=fbo;cont++){
+    for(cont=0;cont<fbo;cont++){
         if(cont===0){
             arr[cont]=cont;
         }else if(cont===1){
@@ -70,9 +70,9 @@ function fibonacci(fbo){
         }
         else{
             
-            arr[cont]=arr[cont-2]+arr[cont-1];
+            arr[cont]=add(arr[cont-2],arr[cont-1]);
         }
-    }return arr[fbo-1];
+    }return arr[fbo];
 
 }
 // descomente a linha seguinte para testar sua função
