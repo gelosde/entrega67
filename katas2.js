@@ -18,16 +18,16 @@ function multiply(multiplicado,multiplicador){
   }
 console.assert(multiply(4, 6) === 24, 'A função multiply não está funcionando como esperado');
 
- function power(valor,potencia){
-    let total=0;   
-    for(cont=1;cont<potencia;cont++){
-    if(cont===1){
-        total= multiply(valor,valor);
-    }else{
-        total=multiply(total,valor);
-    }return total;}
+  function power(valor,potencia){
+    let total=valor;   
+    for(cont=0;cont<potencia-1;cont++){
+    total= multiply(total,valor);
     }
-
+    if(potencia===0){
+        total=1;
+    }
+    return total;
+}
   
  console.assert(power(3, 4) === 81, 'A função power não está funcionando como esperado');
 
